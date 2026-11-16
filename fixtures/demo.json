@@ -1,0 +1,11 @@
+{
+  "plants": [{"plant_id":"P1","name":"Synthetic Carbon Plant","timezone":"Asia/Shanghai","active_from":"2026-01-01"}],
+  "lines": [{"line_id":"L1","plant_id":"P1","daily_capacity":"100","active_from":"2026-01-01"}],
+  "specifications": [{"spec_id":"S1","grade":"G1","valid_from":"2026-01-01","sulfur_min":"0","sulfur_max":"1.2","ash_max":"0.8"}],
+  "batches": [{"source":"synthetic-factory","batch_id":"B1","events":[
+    {"kind":"lot","external_id":"lot-1","lot_id":"LOT1","line_id":"L1","grade":"G1","produced_at":"2026-02-01T02:00:00Z","quantity":"40"},
+    {"kind":"assay","external_id":"assay-1","assay_id":"A1","lot_id":"LOT1","sampled_at":"2026-02-01T03:00:00Z","sulfur":"0.7","ash":"0.4"},
+    {"kind":"shipment","external_id":"ship-1","shipment_id":"SH1","lot_id":"LOT1","shipped_at":"2026-02-02T04:00:00Z","quantity":"10","destination":"Synthetic Buyer"}
+  ]}],
+  "query": {"plant_id":"P1","from_day":"2026-02-01","to_day":"2026-02-02"}
+}
